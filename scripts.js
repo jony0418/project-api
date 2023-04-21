@@ -1,6 +1,6 @@
 // Replace with your own API keys
 var ZILLOW_API_KEY = 'YOUR_ZILLOW_API_KEY';
-var GOOGLE_MAPS_API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY';
+var GOOGLE_MAPS_API_KEY = 'AIzaSyBTQ2hAfA9t3o_QUNZ0rn8mCg71Tgj7CZw';
 
 // Get DOM elements
 var searchButton = document.getElementById('search-button');
