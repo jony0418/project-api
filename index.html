@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US House Search Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTQ2hAfA9t3o_QUNZ0rn8mCg71Tgj7CZw"></script>
+</head>
+<body>
+    <header>
+        <h1>US House Search Platform</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="location-search" placeholder="Enter location">
+            <input type="number" id="min-price" placeholder="Min price">
+            <input type="number" id="max-price" placeholder="Max price">
+            <button id="search-button">Search</button>
+        </div>
+        <div id="map"></div>
+        <div id="property-list"></div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
