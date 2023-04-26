@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +13,7 @@ header {
     background-color: #4CAF50;
     padding: 1rem;
     text-align: center;
+    width: 98.1%;
 }
 
 h1 {
@@ -21,8 +27,16 @@ h1 {
     margin: 1rem;
 }
 
-input, button {
+.inputs, #search-button {
     margin: 0 0.5rem;
+}
+
+#search-button {
+    font-size: 19px;
+}
+
+.inputs {
+    font-size: 18px;
 }
 
 #map {
@@ -36,4 +50,34 @@ input, button {
     flex-wrap: wrap;
     justify-content: center;
     margin: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .app-title {
+        font-size: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px auto;
+        max-width: 300px;
+    }
+
+    .inputs, #search-button {
+        margin: 3px;
+    }
+
+    #search-button {
+        width: 30%;
+        justify-content: center;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    #map {
+        justify-content: center;
+        margin: 15px auto;
+    }
+
 }
