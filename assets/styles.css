@@ -1,0 +1,125 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #37373D;
+}
+
+header {
+    background-color: #222222;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.app-title {
+    color: #4CAF50;
+    margin: 0;
+    font-size: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem 2rem;
+    color: white;
+    font-size: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.inputs, #search-button {
+    margin: 0 0.5rem;
+}
+
+#search-button {
+    font-size: 19px;
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    transition: 0.2s ease-in all;
+}
+
+#search-button:hover {
+    color: #4CAF50;
+    background-color: #37373D;
+    transform: scale(1.1);
+    border-radius: 6px;
+    transition: 0.2s ease-out all;
+}
+
+.inputs {
+    font-size: 18px;
+    padding: 5px 6px;
+    justify-content: center;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #37373D;
+    color: white;
+}
+
+.inputs::-webkit-outer-spin-button,
+.inputs::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputs::placeholder {
+    font-style: italic;
+}
+
+#map {
+    height: 400px;
+    margin: 1rem auto;
+    width: 80%;
+    border: 5px solid #4CAF50;
+    border-radius: 5px;
+}
+
+#property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1080px) {
+    .app-title {
+        font-size: 25px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px auto;
+        max-width: 300px;
+    }
+
+    .inputs {
+        margin: 3px;
+    }
+
+    #search-button {
+        justify-content: center;
+        margin: 10px auto;
+        text-align: center;
+        height: 34px;
+    }
+
+    #map {
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+}
