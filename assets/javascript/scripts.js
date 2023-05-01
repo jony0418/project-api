@@ -178,12 +178,16 @@ function updateSearchHistoryList() {
     var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
     var listElement = document.getElementById('search-history');
 
+    // Shows the list of items
+    listElement.classList.remove("hidden");
+
     // Clear existing list items
     listElement.innerHTML = '';
 
     // Create list items for each search
     searchHistory.forEach((search) => {
         var listItem = document.createElement('li');
+        listItem.classList.add("search-history-list");
         listItem.textContent = `${search.location} | Min: $${search.minPrice} | Max: $${search.maxPrice} | Properties: ${search.propertyCount} | Date: ${search.timestamp}`;
         listElement.appendChild(listItem);
     });

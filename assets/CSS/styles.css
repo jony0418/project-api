@@ -10,7 +10,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #37373D;
 }
 
@@ -120,8 +120,35 @@ h1 {
     border-radius: 5px;
 }
 
-/* For making responsive app */
+h2 {
+    width: 75%;
+    color: white;
+    font-family: var(--Lato);
+    font-size: 24px;
+    margin: 10px auto;
+}
 
+.hidden {
+    display: none;
+}
+
+#search-history {
+    width: 75%;
+    list-style-type: none;
+}
+
+.search-history-list {
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    font-family: var(--Lato);
+    font-size: 19px;
+    padding: 10px;
+    margin: 10px 0;
+    display: table;
+}
+
+/* For making responsive app */
 @media screen and (max-width: 1080px) {
     h1 {
         width: 400px;
