@@ -17,14 +17,16 @@ body {
 header {
     background-color: #222222;
     padding: 1rem;
-    width: 97.4%;
+    width: 98.2%;
     text-align: center;
 }
 
-header img {
+/* HOUSE FINDER logo */
+.logo {
     height: 100px;
 }
 
+/* Line between the logo and the motto */
 hr {
     background-color: #4CAF50;
     border: none;
@@ -32,6 +34,7 @@ hr {
     width: 500px;
 }
 
+/* Located below the hr element */
 .motto {
     font-family: var(--Jack);
     font-size: 19px;
@@ -40,6 +43,7 @@ hr {
     width: 50%;
 }
 
+/* Instructions for search */
 h1 {
     text-align: center;
     color: white;
@@ -52,16 +56,19 @@ h1 {
     border-radius: 10px;
 }
 
+/* The container for the inpus: location, min-price, max-price and the search button */
 .search-container {
     display: flex;
     justify-content: center;
     margin: 0.5rem;
 }
 
+/* Inputs and search button inside the search-container */
 .inputs, #search-button {
     margin: 0 0.5rem;
 }
 
+/* search button */
 #search-button {
     font-size: 19px;
     width: 100px;
@@ -72,6 +79,7 @@ h1 {
     transition: 0.2s ease-in all;
 }
 
+/* seacrh button styles when hovering on it */
 #search-button:hover {
     color: #4CAF50;
     background-color: #37373D;
@@ -80,6 +88,7 @@ h1 {
     transition: 0.2s ease-out all;
 }
 
+/* input fields for the search */
 .inputs {
     font-size: 18px;
     padding: 5px 6px;
@@ -90,31 +99,28 @@ h1 {
     color: white;
 }
 
+/* Helps to hide the +1 and -1 arrows on the input type number fields */
 .inputs::-webkit-outer-spin-button,
 .inputs::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+/* Inputs placeholder styles */
 .inputs::placeholder {
     font-style: italic;
 }
 
+/* Map styles */
 #map {
-    height: 400px;
+    height: 500px;
     margin: 1rem auto;
     width: 80%;
     border: 5px solid #4CAF50;
     border-radius: 5px;
 }
 
-#property-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1rem;
-}
-
+/* Styles for responsive */
 @media screen and (max-width: 1080px) {
     h1 {
         width: 400px;
@@ -198,13 +204,13 @@ h1 {
     }
 
 }
-
+/* Fonts */
 @font-face {
     font-family: Lato;
-    src: url(./fonts/Lato.ttf);
+    src: url(../fonts/Lato.ttf);
 }
 
 @font-face {
     font-family: Jack;
-    src: url(./fonts/Jack.TTF);
+    src: url(../fonts/Jack.TTF);
 }
