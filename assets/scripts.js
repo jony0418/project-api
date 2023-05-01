@@ -45,10 +45,16 @@ searchButton.addEventListener('click', async () => {
 
         // Display properties on Google Maps
         displayPropertiesOnMap(properties, map);
+
+        // Save search to localStorage
+        saveSearchToHistory(location, min, max, properties.length);
+
     } catch (error) {
         console.error('Error:', error);
         alert('An error occurred. Please check the console for more details.');
     }
+    // Update search history list
+    updateSearchHistoryList();
 });
 
 // Fetch data from SimplyRETS API and filter by price range (function definition)
@@ -149,3 +155,46 @@ async function moveMapToCity(cityName) {
         alert('No results found for the given location.');
     }
 }
+
+function saveSearchToHistory(location, minPrice, maxPrice, propertyCount) {
+    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    var newSearch = {
+        location,
+        minPrice,
+        maxPrice,
+        propertyCount,
+        timestamp: new Date().toISOString(),
+    };
+    searchHistory.push(newSearch);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+}
+
+function getSearchHistory() {
+    var history = localStorage.getItem('searchHistory');
+    return history ? JSON.parse(history) : [];
+}
+
+function updateSearchHistoryList() {
+    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    var listElement = document.getElementById('search-history');
+
+    // Clear existing list items
+    listElement.innerHTML = '';
+
+    // Create list items for each search
+    searchHistory.forEach((search) => {
+        var listItem = document.createElement('li');
+        listItem.textContent = `${search.location} | Min: $${search.minPrice} | Max: $${search.maxPrice} | Properties: ${search.propertyCount} | Date: ${search.timestamp}`;
+        listElement.appendChild(listItem);
+    });
+}
+
+var clearHistoryButton = document.getElementById('clear-history');
+
+clearHistoryButton.addEventListener('click', () => {
+    // Clear localStorage
+    localStorage.removeItem('searchHistory');
+
+    // Update the search history list
+    updateSearchHistoryList();
+});
