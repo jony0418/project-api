@@ -14,9 +14,13 @@ The Property Search Web App is a user-friendly application designed to help user
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/property-search-webapp.git
+git clone https://github.com/jony0418/project-api.git
 
 2. Open the index.html file in a web browser. No additional installation steps are required, as the application runs directly in the browser.
+
+## Screenshots
+
+![Screenshot of the Property Search Web App](./assets/images/screenshot.png)
 
 ## Usage
 
