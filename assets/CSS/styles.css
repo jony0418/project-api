@@ -121,6 +121,7 @@ h1 {
 }
 
 /* For making responsive app */
+
 @media screen and (max-width: 1080px) {
     h1 {
         width: 400px;
