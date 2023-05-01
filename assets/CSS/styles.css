@@ -120,7 +120,8 @@ h1 {
     border-radius: 5px;
 }
 
-/* Styles for responsive */
+/* For making responsive app */
+
 @media screen and (max-width: 1080px) {
     h1 {
         width: 400px;
@@ -204,6 +205,7 @@ h1 {
     }
 
 }
+
 /* Fonts */
 @font-face {
     font-family: Lato;
