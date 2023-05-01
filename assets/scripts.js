@@ -55,6 +55,7 @@ searchButton.addEventListener('click', async () => {
 async function fetchProperties(location, min, max) {
     const url = new URL('https://api.simplyrets.com/properties');
     const params = {
+        cities: location,
         minprice: min,
         maxprice: max,
     };
@@ -72,11 +73,8 @@ async function fetchProperties(location, min, max) {
     }
 
     const data = await response.json();
-    console.log('Unfiltered properties:', data); // Log unfiltered data
-
-    const filteredData = data.filter(property => property.address.city.toLowerCase() === location.toLowerCase());
-    console.log('Fetched properties:', filteredData);
-    return filteredData;
+    console.log('Fetched properties:', data);
+    return data;
 }
 
 // Display properties on Google Maps (function definition)
