@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US House Search Platform</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTQ2hAfA9t3o_QUNZ0rn8mCg71Tgj7CZw"></script>
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
 </head>
 <body>
     <header>
-        <h1>US House Search Platform</h1>
+        <img class="logo" src="./assets/images/Logo.PNG">
+        <hr>
+        <p class="motto">Your one-stop-shop for finding your new home.</p>
     </header>
     <main>
+        <h1>Please fill the fields to search for your new home!</h1>
+
         <div class="search-container">
-            <input type="text" id="location-search" placeholder="Enter location">
-            <input type="number" id="min-price" placeholder="Min price">
-            <input type="number" id="max-price" placeholder="Max price">
+            <input class="inputs" type="text" id="location-search" placeholder="Enter location">
+            <input class="inputs" type="number" id="min-price" placeholder="Min price">
+            <input class="inputs" type="number" id="max-price" placeholder="Max price">
             <button id="search-button">Search</button>
         </div>
         <div id="map"></div>
-        <div id="property-list"></div>
+        <div id="search-history">
+            <h3>Search History</h3>
+            <ul id="search-history-list"></ul>
+        </div>
+        <button id="clear-history">Clear Search History</button>
+
     </main>
-    <script src="scripts.js"></script>
+    <script src="./assets/javascript/scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTQ2hAfA9t3o_QUNZ0rn8mCg71Tgj7CZw&callback=initMap" async defer></script>
 </body>
 </html>

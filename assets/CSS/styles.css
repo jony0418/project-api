@@ -1,0 +1,217 @@
+:root {
+  --Lato: Lato;
+  --Jack: Jack;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #37373D;
+}
+
+header {
+    background-color: #222222;
+    padding: 1rem;
+    width: 98.2%;
+    text-align: center;
+}
+
+/* HOUSE FINDER logo */
+.logo {
+    height: 100px;
+}
+
+/* Line between the logo and the motto */
+hr {
+    background-color: #4CAF50;
+    border: none;
+    height: 2px;
+    width: 500px;
+}
+
+/* Located below the hr element */
+.motto {
+    font-family: var(--Jack);
+    font-size: 19px;
+    color: white;
+    margin-top: 10px;
+    width: 50%;
+}
+
+/* Instructions for search */
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    font-family: var(--Lato);
+    background-color: #4CAF50;
+    width: 35%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* The container for the inpus: location, min-price, max-price and the search button */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+/* Inputs and search button inside the search-container */
+.inputs, #search-button {
+    margin: 0 0.5rem;
+}
+
+/* search button */
+#search-button {
+    font-size: 19px;
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    transition: 0.2s ease-in all;
+}
+
+/* seacrh button styles when hovering on it */
+#search-button:hover {
+    color: #4CAF50;
+    background-color: #37373D;
+    transform: scale(1.1);
+    border-radius: 6px;
+    transition: 0.2s ease-out all;
+}
+
+/* input fields for the search */
+.inputs {
+    font-size: 18px;
+    padding: 5px 6px;
+    justify-content: center;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #37373D;
+    color: white;
+}
+
+/* Helps to hide the +1 and -1 arrows on the input type number fields */
+.inputs::-webkit-outer-spin-button,
+.inputs::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Inputs placeholder styles */
+.inputs::placeholder {
+    font-style: italic;
+}
+
+/* Map styles */
+#map {
+    height: 500px;
+    margin: 1rem auto;
+    width: 80%;
+    border: 5px solid #4CAF50;
+    border-radius: 5px;
+}
+
+/* For making responsive app */
+@media screen and (max-width: 1080px) {
+    h1 {
+        width: 400px;
+        font-size: 22px;
+    }
+
+    .motto {
+        width: 70%;
+    }
+
+    .header {
+        width: 50%;
+    }
+
+    .search-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px auto;
+        max-width: 300px;
+    }
+
+    .inputs {
+        margin: 3px;
+    }
+
+    #search-button {
+        justify-content: center;
+        margin: 10px auto;
+        text-align: center;
+        height: 34px;
+    }
+
+    #map {
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    hr {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        width: 70%;
+        font-size: 22px;
+    }
+
+    .motto, hr {
+        width: 70%;
+    }
+
+    .header {
+        width: 50%;
+    }
+
+    .search-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px auto;
+        max-width: 300px;
+    }
+
+    .inputs {
+        margin: 3px;
+    }
+
+    #search-button {
+        justify-content: center;
+        margin: 10px auto;
+        text-align: center;
+        height: 34px;
+    }
+
+    #map {
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+}
+
+/* Fonts */
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato.ttf);
+}
+
+@font-face {
+    font-family: Jack;
+    src: url(../fonts/Jack.TTF);
+}

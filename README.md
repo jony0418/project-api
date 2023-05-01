@@ -35,4 +35,4 @@ git clone https://github.com/yourusername/property-search-webapp.git
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT), which permits open-source use, modification, and distribution with some conditions.`;
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT), which permits open-source use, modification, and distribution with some conditions.
