@@ -113,7 +113,7 @@ function displayPropertiesOnMap(properties, map) {
             content: `
                 <h3>${property.address.full}</h3>
                 <p>Price: $${property.listPrice}</p>
-                <p>Elementery School: ${property.school.elementerySchool}</p>
+                <p>Elementery School: ${property.school.elementarySchool}</p>
                 <p>Middle School: ${property.school.middleSchool}</p>
                 <p>High School: ${property.school.highSchool}</p>
                 <p>Bedrooms: ${property.property.bedrooms}</p>
