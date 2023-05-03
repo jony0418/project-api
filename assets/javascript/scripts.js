@@ -15,7 +15,7 @@ let map;
 function initMap() {
     map = new google.maps.Map(mapDiv, {
         center: { lat: 32.796574, lng: -96.778978 },
-        zoom: 15,
+        zoom: 10,
     });
 }
 
@@ -51,7 +51,6 @@ searchButton.addEventListener('click', async () => {
 
     } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred. Please check the console for more details.');
     }
     // Update search history list
     updateSearchHistoryList();
@@ -154,9 +153,9 @@ async function moveMapToCity(cityName) {
     if (data.results.length > 0) {
         var location = data.results[0].geometry.location;
         map.setCenter(location);
-        map.setZoom(15);
-    } else {
-        alert('No results found for the given location.');
+        map.setZoom(10);
+    // } else {
+    //     alert('No results found for the given location.');
     }
 }
 
