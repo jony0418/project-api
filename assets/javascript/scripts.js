@@ -118,7 +118,7 @@ function displayPropertiesOnMap(properties, map) {
                 <p>Bedrooms: ${property.property.bedrooms}</p>
                 <p>Bathrooms: ${property.property.bathsFull}</p>
                 <div>${photos}</div>
-                <p>Agent: ${property.agent.firstNamel} + ${property.agent.lastName}</p>
+                <p>Agent: ${property.agent.firstName} + ${property.agent.lastName}</p>
                 <p>Email: ${property.agent.contact.email}</p>
                 <p>Phone: ${property.agent.contact.office}</p>
 
